@@ -1,0 +1,11 @@
+add_executable(test_message_parser test_message_parser.cpp)
+target_link_libraries(test_message_parser PRIVATE emcb_lib)
+add_test(NAME MessageParser COMMAND test_message_parser)
+
+add_executable(test_command_handler test_command_handler.cpp)
+target_link_libraries(test_command_handler PRIVATE emcb_lib)
+add_test(NAME CommandHandler COMMAND test_command_handler)
+
+add_executable(test_integration test_integration.cpp)
+target_link_libraries(test_integration PRIVATE emcb_lib)
+add_test(NAME Integration COMMAND test_integration)
